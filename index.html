@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NovaDent - Современная стоматологическая клиника. Лечение зубов без боли, имплантация, отбеливание и детская стоматология. Запишитесь на прием онлайн.">
+    <meta name="keywords" content="стоматология, лечение зубов, имплантация, брекеты, отбеливание, детский стоматолог">
+    <title>NovaDent | Современная стоматологическая клиника</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <span class="logo__icon">🦷</span>
+                <span class="logo__text">NovaDent</span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
+                    <li class="nav__item"><a href="#doctors" class="nav__link">Врачи</a></li>
+                    <li class="nav__item"><a href="#prices" class="nav__link">Цены</a></li>
+                    <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+                </ul>
+                <button class="nav__close" id="nav-close" aria-label="Закрыть меню">&times;</button>
+            </nav>
+
+            <div class="header__actions">
+                <a href="#appointment" class="btn btn--primary">Записаться</a>
+                <button class="burger" id="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero__container">
+                <div class="hero__content fade-in">
+                    <h1 class="hero__title">Здоровая улыбка — ваша уверенность</h1>
+                    <p class="hero__description">Современная стоматология с заботой о каждом пациенте. Безболезненное лечение, передовые технологии и опытные специалисты.</p>
+                    <div class="hero__btns">
+                        <a href="#appointment" class="btn btn--primary btn--lg">Записаться на прием</a>
+                        <a href="#services" class="btn btn--outline btn--lg">Наши услуги</a>
+                    </div>
+                    <div class="hero__features">
+                        <div class="hero__feature">
+                            <span class="hero__feature-icon">✓</span>
+                            <span>Бесплатная консультация</span>
+                        </div>
+                        <div class="hero__feature">
+                            <span class="hero__feature-icon">✓</span>
+                            <span>Гарантия на все работы</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__image fade-in delay-200">
+                    <!-- Placeholder for hero image -->
+                    <img src="https://placehold.co/600x500/E0F7FA/006064?text=Healthy+Smile" alt="Счастливый пациент с красивой улыбкой" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section__header text-center fade-in">
+                    <h2 class="section__title">Наши услуги</h2>
+                    <p class="section__subtitle">Комплексный подход к здоровью ваших зубов</p>
+                </div>
+
+                <div class="services__grid">
+                    <div class="service-card fade-in">
+                        <div class="service-card__icon">🦷</div>
+                        <h3 class="service-card__title">Лечение кариеса</h3>
+                        <p class="service-card__text">Эстетическая реставрация зубов с использованием современных светоотверждаемых материалов. Лечение без боли.</p>
+                    </div>
+
+                    <div class="service-card fade-in delay-100">
+                        <div class="service-card__icon">🔩</div>
+                        <h3 class="service-card__title">Имплантация</h3>
+                        <p class="service-card__text">Восстановление утраченных зубов с помощью имплантатов ведущих мировых производителей. Пожизненная гарантия.</p>
+                    </div>
+
+                    <div class="service-card fade-in delay-200">
+                        <div class="service-card__icon">✨</div>
+                        <h3 class="service-card__title">Отбеливание</h3>
+                        <p class="service-card__text">Безопасное профессиональное отбеливание зубов на 2-8 тонов. Технологии Zoom и Opalescence.</p>
+                    </div>
+
+                    <div class="service-card fade-in delay-300">
+                        <div class="service-card__icon">😬</div>
+                        <h3 class="service-card__title">Брекеты</h3>
+                        <p class="service-card__text">Исправление прикуса в любом возрасте. Металлические, керамические и сапфировые брекет-системы.</p>
+                    </div>
+
+                    <div class="service-card fade-in delay-400">
+                        <div class="service-card__icon">🛡️</div>
+                        <h3 class="service-card__title">Профгигиена</h3>
+                        <p class="service-card__text">Ультразвуковая чистка, Air Flow, полировка и фторирование. Профилактика заболеваний десен.</p>
+                    </div>
+
+                    <div class="service-card fade-in delay-500">
+                        <div class="service-card__icon">🧸</div>
+                        <h3 class="service-card__title">Детская стоматология</h3>
+                        <p class="service-card__text">Бережное лечение молочных и постоянных зубов в игровой форме. Обучение гигиене.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section class="advantages section section--bg-light" id="advantages">
+            <div class="container">
+                <div class="section__header text-center fade-in">
+                    <h2 class="section__title">Почему выбирают нас</h2>
+                    <p class="section__subtitle">Мы создаем комфортные условия для каждого пациента</p>
+                </div>
+
+                <div class="advantages__grid">
+                    <div class="advantage-item fade-in">
+                        <div class="advantage-item__icon">👨‍⚕️</div>
+                        <h3 class="advantage-item__title">Опытные врачи</h3>
+                        <p class="advantage-item__text">Команда специалистов со стажем более 10 лет, регулярно повышающих квалификацию.</p>
+                    </div>
+
+                    <div class="advantage-item fade-in delay-100">
+                        <div class="advantage-item__icon">🔬</div>
+                        <h3 class="advantage-item__title">Современное оборудование</h3>
+                        <p class="advantage-item__text">Используем передовые технологии диагностики и лечения (3D-томография, микроскопы).</p>
+                    </div>
+
+                    <div class="advantage-item fade-in delay-200">
+                        <div class="advantage-item__icon">😌</div>
+                        <h3 class="advantage-item__title">Лечение без боли</h3>
+                        <p class="advantage-item__text">Применяем современные анестетики и методы седации для вашего комфорта.</p>
+                    </div>
+
+                    <div class="advantage-item fade-in delay-300">
+                        <div class="advantage-item__icon">💎</div>
+                        <h3 class="advantage-item__title">Гарантия качества</h3>
+                        <p class="advantage-item__text">Предоставляем официальную гарантию на все виды стоматологических услуг.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Section -->
+        <section class="doctors section" id="doctors">
+            <div class="container">
+                <div class="section__header text-center fade-in">
+                    <h2 class="section__title">Наши специалисты</h2>
+                    <p class="section__subtitle">Профессионалы, которым вы можете доверить свое здоровье</p>
+                </div>
+
+                <div class="doctors__grid">
+                    <div class="doctor-card fade-in">
+                        <div class="doctor-card__image">
+                            <img src="https://placehold.co/300x350/E0F7FA/006064?text=Dr.+Ivanov" alt="Алексей Иванов" loading="lazy">
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor-card__name">Д-р Алексей Иванов</h3>
+                            <p class="doctor-card__specialty">Стоматолог-хирург, имплантолог</p>
+                            <p class="doctor-card__exp">Стаж: 12 лет</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card fade-in delay-100">
+                        <div class="doctor-card__image">
+                            <img src="https://placehold.co/300x350/E0F7FA/006064?text=Dr.+Smirnova" alt="Елена Смирнова" loading="lazy">
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor-card__name">Д-р Елена Смирнова</h3>
+                            <p class="doctor-card__specialty">Стоматолог-терапевт, эндодонтист</p>
+                            <p class="doctor-card__exp">Стаж: 8 лет</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card fade-in delay-200">
+                        <div class="doctor-card__image">
+                            <img src="https://placehold.co/300x350/E0F7FA/006064?text=Dr.+Petrov" alt="Михаил Петров" loading="lazy">
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor-card__name">Д-р Михаил Петров</h3>
+                            <p class="doctor-card__specialty">Ортодонт</p>
+                            <p class="doctor-card__exp">Стаж: 10 лет</p>
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-card fade-in delay-300">
+                        <div class="doctor-card__image">
+                            <img src="https://placehold.co/300x350/E0F7FA/006064?text=Dr.+Volkova" alt="Анна Волкова" loading="lazy">
+                        </div>
+                        <div class="doctor-card__content">
+                            <h3 class="doctor-card__name">Д-р Анна Волкова</h3>
+                            <p class="doctor-card__specialty">Детский стоматолог</p>
+                            <p class="doctor-card__exp">Стаж: 6 лет</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prices Section -->
+        <section class="prices section section--bg-light" id="prices">
+            <div class="container">
+                <div class="section__header text-center fade-in">
+                    <h2 class="section__title">Цены на услуги</h2>
+                    <p class="section__subtitle">Честные цены без скрытых доплат</p>
+                </div>
+
+                <div class="prices__table-wrapper fade-in">
+                    <table class="prices__table">
+                        <thead>
+                            <tr>
+                                <th>Услуга</th>
+                                <th>Цена (от)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Первичная консультация</td>
+                                <td>Бесплатно</td>
+                            </tr>
+                            <tr>
+                                <td>Лечение кариеса (поверхностный)</td>
+                                <td>3 500 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Лечение кариеса (глубокий)</td>
+                                <td>5 500 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Профессиональная гигиена полости рта</td>
+                                <td>4 500 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Отбеливание зубов Zoom 4</td>
+                                <td>25 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Установка импланта (Osstem, Корея)</td>
+                                <td>28 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Установка импланта (Straumann, Швейцария)</td>
+                                <td>45 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Металлическая брекет-система (1 челюсть)</td>
+                                <td>35 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Керамическая коронка E-max</td>
+                                <td>22 000 ₽</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="prices__note text-center fade-in">
+                    <p>* Цены носят ознакомительный характер. Точную стоимость лечения врач определит после осмотра.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews section" id="reviews">
+            <div class="container">
+                <div class="section__header text-center fade-in">
+                    <h2 class="section__title">Отзывы пациентов</h2>
+                    <p class="section__subtitle">Что говорят о нас наши клиенты</p>
+                </div>
+
+                <div class="reviews__slider fade-in">
+                    <div class="reviews__track" id="reviewsTrack">
+                        <div class="review-card">
+                            <div class="review-card__header">
+                                <div class="review-card__avatar">О</div>
+                                <div class="review-card__info">
+                                    <h4 class="review-card__name">Ольга Николаева</h4>
+                                    <div class="review-card__stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p class="review-card__text">"Огромное спасибо доктору Иванову за профессионализм! Удалили зуб мудрости быстро и совершенно без боли. Клиника очень чистая, персонал вежливый. Рекомендую!"</p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-card__header">
+                                <div class="review-card__avatar review-card__avatar--blue">Д</div>
+                                <div class="review-card__info">
+                                    <h4 class="review-card__name">Дмитрий Соколов</h4>
+                                    <div class="review-card__stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p class="review-card__text">"Делал здесь чистку и отбеливание. Результат превзошел ожидания! Зубы стали значительно белее, но выглядят естественно. Очень доволен сервисом."</p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-card__header">
+                                <div class="review-card__avatar review-card__avatar--mint">М</div>
+                                <div class="review-card__info">
+                                    <h4 class="review-card__name">Мария Власова</h4>
+                                    <div class="review-card__stars">⭐⭐⭐⭐⭐</div>
+                                </div>
+                            </div>
+                            <p class="review-card__text">"Приводила дочку лечить зубик. Врач Анна Волкова нашла подход, ребенок даже не пикнул! Подарили подарок в конце. Теперь только сюда."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews__controls">
+                        <button class="reviews__btn reviews__btn--prev" id="prevReview" aria-label="Предыдущий отзыв">←</button>
+                        <button class="reviews__btn reviews__btn--next" id="nextReview" aria-label="Следующий отзыв">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Section -->
+        <section class="appointment section section--bg-blue" id="appointment">
+            <div class="container appointment__container">
+                <div class="appointment__content fade-in">
+                    <h2 class="section__title section__title--white">Запишитесь на прием</h2>
+                    <p class="section__subtitle section__subtitle--white">Оставьте заявку, и мы перезвоним вам в течение 15 минут для подтверждения записи.</p>
+                    <ul class="appointment__benefits">
+                        <li>✓ Удобное время приема</li>
+                        <li>✓ Напоминание о визите</li>
+                        <li>✓ Парковка для клиентов</li>
+                    </ul>
+                </div>
+                
+                <form class="appointment__form fade-in delay-100" id="appointmentForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Ваше имя</label>
+                        <input type="text" id="name" class="form-input" placeholder="Иван Иванов" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Телефон</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="+7 (999) 000-00-00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date" class="form-label">Желаемая дата</label>
+                        <input type="date" id="date" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment" class="form-label">Комментарий (необязательно)</label>
+                        <textarea id="comment" class="form-input form-textarea" placeholder="Что вас беспокоит?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+                    <p class="form-agreement">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contacts Section -->
+        <section class="contacts section" id="contacts">
+            <div class="container">
+                <div class="section__header text-center fade-in">
+                    <h2 class="section__title">Контакты</h2>
+                </div>
+
+                <div class="contacts__grid">
+                    <div class="contacts__info fade-in">
+                        <div class="contact-item">
+                            <div class="contact-item__icon">📍</div>
+                            <div>
+                                <h4 class="contact-item__title">Адрес</h4>
+                                <p class="contact-item__text">г. Москва, ул. Ленина, д. 10, стр. 2</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item__icon">📞</div>
+                            <div>
+                                <h4 class="contact-item__title">Телефон</h4>
+                                <p class="contact-item__text"><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+                                <p class="contact-item__text"><a href="tel:+79990000000">+7 (999) 000-00-00</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item__icon">📧</div>
+                            <div>
+                                <h4 class="contact-item__title">Email</h4>
+                                <p class="contact-item__text"><a href="mailto:info@novadent.ru">info@novadent.ru</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item__icon">🕒</div>
+                            <div>
+                                <h4 class="contact-item__title">Режим работы</h4>
+                                <p class="contact-item__text">Пн-Пт: 08:00 - 21:00</p>
+                                <p class="contact-item__text">Сб-Вс: 09:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts__map fade-in delay-100">
+                        <!-- Placeholder for map -->
+                        <div style="width: 100%; height: 400px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #666;">
+                            Карта (Google Maps / Yandex Maps)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="#" class="logo logo--white">
+                        <span class="logo__icon">🦷</span>
+                        <span class="logo__text">NovaDent</span>
+                    </a>
+                    <p class="footer__desc">Современная стоматология для всей семьи. Заботимся о вашей улыбке с 2015 года.</p>
+                </div>
+                
+                <div class="footer__col">
+                    <h4 class="footer__title">Меню</h4>
+                    <ul class="footer__list">
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#doctors">Врачи</a></li>
+                        <li><a href="#prices">Цены</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Услуги</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">Терапия</a></li>
+                        <li><a href="#">Хирургия</a></li>
+                        <li><a href="#">Имплантация</a></li>
+                        <li><a href="#">Ортодонтия</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Мы в соцсетях</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="VK">VK</a>
+                        <a href="#" class="social-link" aria-label="Telegram">TG</a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">WA</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 NovaDent. Все права защищены.</p>
+                <p><a href="#">Политика конфиденциальности</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Modal -->
+    <div class="modal" id="notificationModal">
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose">&times;</button>
+            <div class="modal__icon">✅</div>
+            <h3 class="modal__title">Заявка отправлена!</h3>
+            <p class="modal__text">Спасибо за обращение. Наш администратор свяжется с вами в ближайшее время для уточнения деталей.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
