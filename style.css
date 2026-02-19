@@ -17,6 +17,7 @@
 
     /* Typography */
     --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-brand: 'Playfair Display', Georgia, serif;
     --font-size-base: 16px;
     --line-height: 1.6;
 
@@ -210,9 +211,8 @@ h1, h2, h3, h4, h5, h6 {
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     font-weight: 700;
-    font-size: 1.5rem;
     color: var(--color-secondary);
 }
 
@@ -220,8 +220,35 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.8rem;
 }
 
+.logo__image {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
+    padding: 3px;
+    background: linear-gradient(145deg, #f8fdff 0%, #dff5ff 100%);
+    border: 1px solid rgba(0, 151, 167, 0.18);
+    box-shadow: 0 6px 14px rgba(0, 151, 167, 0.18);
+}
+
+.logo__text {
+    font-family: var(--font-brand);
+    font-size: 2.05rem;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+    line-height: 1;
+    color: #0a6974;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
 .logo--white {
     color: var(--color-white);
+}
+
+.logo--white .logo__text {
+    color: var(--color-white);
+    text-shadow: none;
 }
 
 /* Mobile Nav */
@@ -324,6 +351,19 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@media (max-width: 520px) {
+    .logo__image {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        padding: 2px;
+    }
+
+    .logo__text {
+        font-size: 1.55rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .nav__list {
         gap: var(--spacing-md);
@@ -334,14 +374,30 @@ h1, h2, h3, h4, h5, h6 {
    4. Hero Section
    ========================================= */
 .hero {
+    position: relative;
     padding-top: calc(var(--header-height) + var(--spacing-lg));
     padding-bottom: var(--spacing-lg);
-    background: linear-gradient(135deg, var(--color-bg-light) 0%, #e0f7fa 100%);
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(rgba(9, 74, 90, 0.62), rgba(9, 74, 90, 0.62)),
+        url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(224, 247, 250, 0.2) 100%);
+    pointer-events: none;
 }
 
 .hero__container {
     display: grid;
     gap: var(--spacing-md);
+    position: relative;
+    z-index: 1;
 }
 
 .hero__content {
@@ -351,13 +407,15 @@ h1, h2, h3, h4, h5, h6 {
 .hero__title {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-sm);
-    color: var(--color-secondary);
+    color: var(--color-white);
+    text-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
 }
 
 .hero__description {
     font-size: 1.1rem;
-    color: var(--color-text-light);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--spacing-md);
+    max-width: 760px;
 }
 
 .hero__btns {
@@ -378,12 +436,31 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 10px;
     font-weight: 500;
-    color: var(--color-secondary);
+    color: var(--color-white);
+    text-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
 }
 
 .hero__feature-icon {
     color: var(--color-primary);
     font-weight: 700;
+}
+
+[data-typewriter] {
+    white-space: pre-wrap;
+}
+
+.typewriter-active::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 2px;
+    color: rgba(255, 255, 255, 0.9);
+    animation: caret-blink 0.8s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 .hero__image img {
@@ -393,7 +470,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 992px) {
     .hero__container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         align-items: center;
     }
 
@@ -451,6 +528,28 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
 }
 
+.service-card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-top: 0.5rem;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+.service-card__list li {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.service-card__list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary-dark);
+    font-weight: 700;
+}
+
 /* =========================================
    6. Why Us / Advantages
    ========================================= */
@@ -473,6 +572,20 @@ h1, h2, h3, h4, h5, h6 {
 .advantage-item__title {
     font-size: 1.2rem;
     margin-bottom: var(--spacing-xs);
+}
+
+.xray-card {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border-left: 5px solid var(--color-primary);
+}
+
+.xray-card p + p {
+    margin-top: 0.75rem;
 }
 
 /* =========================================
@@ -525,6 +638,22 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.85rem;
 }
 
+.doctor-card__phone {
+    margin-top: 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.doctor-card__phone {
+    color: var(--color-primary-dark);
+}
+
+.doctor-card__cta {
+    margin-top: 0.5rem;
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+}
+
 /* =========================================
    8. Prices Section
    ========================================= */
@@ -572,6 +701,53 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: var(--spacing-sm);
     font-size: 0.85rem;
     color: var(--color-text-light);
+}
+
+@media (max-width: 768px) {
+    .prices__table-wrapper {
+        padding: 0.85rem;
+        overflow-x: visible;
+    }
+
+    .prices__table {
+        min-width: 0;
+    }
+
+    .prices__table thead {
+        display: none;
+    }
+
+    .prices__table,
+    .prices__table tbody,
+    .prices__table tr,
+    .prices__table td {
+        display: block;
+        width: 100%;
+    }
+
+    .prices__table tr {
+        border: 1px solid #e3eff3;
+        border-radius: 10px;
+        margin-bottom: 0.75rem;
+        background: #fff;
+    }
+
+    .prices__table td {
+        padding: 0.7rem 0.85rem;
+        border: 0;
+    }
+
+    .prices__table td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.75rem;
+        color: var(--color-text-light);
+        margin-bottom: 0.2rem;
+    }
+
+    .prices__table td:last-child {
+        text-align: left;
+    }
 }
 
 /* =========================================
@@ -776,6 +952,19 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr 1fr;
         align-items: flex-start;
     }
+}
+
+.contacts__map iframe {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.contacts__map script + * {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: var(--border-radius);
+    overflow: hidden;
 }
 
 .footer {

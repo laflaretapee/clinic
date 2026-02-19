@@ -67,6 +67,55 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(el => observer.observe(el));
 
     /* =========================================
+       2.1 Typewriter Effect (Hero Text)
+       ========================================= */
+    const typeElements = Array.from(document.querySelectorAll('[data-typewriter]'))
+        .sort((a, b) => Number(a.dataset.typewriterOrder || 0) - Number(b.dataset.typewriterOrder || 0));
+
+    async function runTypewriter() {
+        if (!typeElements.length) return;
+
+        const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+        const isInViewport = (el) => {
+            const rect = el.getBoundingClientRect();
+            return rect.top < window.innerHeight && rect.bottom > 0;
+        };
+
+        const fullTexts = typeElements.map((el) => el.textContent.trim());
+        typeElements.forEach((el) => {
+            el.textContent = '';
+        });
+
+        // Start typing when hero text is actually on screen.
+        let guard = 0;
+        while (!isInViewport(typeElements[0]) && guard < 50) {
+            await wait(120);
+            guard++;
+        }
+        await wait(220);
+
+        const typeOne = async (element) => {
+            const fullText = fullTexts[typeElements.indexOf(element)];
+            const speed = Number(element.dataset.typewriterSpeed || 30);
+            element.classList.add('typewriter-active');
+
+            for (const char of fullText) {
+                element.textContent += char;
+                await wait(speed);
+            }
+
+            element.classList.remove('typewriter-active');
+        };
+
+        for (const element of typeElements) {
+            await typeOne(element);
+            await wait(160);
+        }
+    }
+
+    runTypewriter();
+
+    /* =========================================
        3. Reviews Slider
        ========================================= */
     const track = document.getElementById('reviewsTrack');
