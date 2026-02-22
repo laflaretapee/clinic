@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://laflaretapee.github.io/clinic/sitemap.xml
+Host: laflaretapee.github.io
