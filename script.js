@@ -1,5 +1,5 @@
 /**
- * NovaDent Main Script
+ * Kristall Main Script
  * Handles navigation, animations, sliders, and form validation
  */
 
